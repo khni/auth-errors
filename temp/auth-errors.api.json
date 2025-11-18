@@ -1,0 +1,2037 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.55.0",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@jsx",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@jsxRuntime",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@jsxFrag",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@jsxImportSource",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@khni/auth-errors!",
+  "docComment": "",
+  "name": "@khni/auth-errors",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@khni/auth-errors!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!AuthDomainError:class",
+          "docComment": "/**\n * Authentication Domain Error Class\n *\n * @remarks\n *\n * Represents expected business logic errors that occur during normal authentication operations. These errors are user-facing and typically result from invalid user input or business rules.\n *\n * Domain errors use 'warn' log level as they are expected and don't indicate system problems.\n *\n * @example\n * ```typescript\n * // User tries to register with existing email\n * throw new AuthDomainError(AuthDomainErrorCodes.AUTH_USED_EMAIL);\n *\n * // User provides wrong password\n * throw new AuthDomainError(AuthDomainErrorCodes.INCORRECT_CREDENTIALS);\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class AuthDomainError extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthError",
+              "canonicalReference": "@khni/auth-errors!AuthError:class"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/AuthDomainError.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "AuthDomainError",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@khni/auth-errors!AuthDomainError:constructor(1)",
+              "docComment": "/**\n * Creates a new AuthDomainError instance\n *\n * @param code - The domain error code from AuthDomainErrorCodes\n *\n * @param msg - Optional custom error message (uses default message if not provided)\n *\n * @param meta - Additional metadata for context and debugging\n *\n * @example\n * ```typescript\n * // Basic usage with default message\n * throw new AuthDomainError(AuthDomainErrorCodes.AUTH_USED_EMAIL);\n *\n * // With custom message and metadata\n * throw new AuthDomainError(\n *   AuthDomainErrorCodes.INCORRECT_CREDENTIALS,\n *   'Too many failed attempts',\n *   { userId: '123', attempts: 5 }\n * );\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthDomainErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!AuthDomainErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", msg?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "msg",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                }
+              ]
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!AuthDomainErrorCodes:var",
+          "docComment": "/**\n * Authentication Domain Error Codes\n *\n * @remarks\n *\n * These are expected errors that occur during normal authentication operations and should be returned to the client with appropriate HTTP status codes.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "AuthDomainErrorCodes: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly AUTH_USED_EMAIL: \"AUTH_USED_EMAIL\";\n    readonly AUTH_USED_IDENTIFIER: \"AUTH_USED_IDENTIFIER\";\n    readonly AUTH_UNVERIFIED_EMAIL: \"AUTH_UNVERIFIED_EMAIL\";\n    readonly INCORRECT_CREDENTIALS: \"INCORRECT_CREDENTIALS\";\n    readonly USER_NOT_LOCAL: \"USER_NOT_LOCAL\";\n    readonly REFRESH_TOKEN_INVALID: \"REFRESH_TOKEN_INVALID\";\n    readonly MISSING_OR_MALFORMED_AUTHORIZATION_HEADER: \"MISSING_OR_MALFORMED_AUTHORIZATION_HEADER\";\n    readonly INVALID_ACCESS_TOKEN: \"INVALID_ACCESS_TOKEN\";\n    readonly EXPIRED_ACCESS_TOKEN: \"EXPIRED_ACCESS_TOKEN\";\n    readonly MISSING_ACCESS_TOKEN: \"MISSING_ACCESS_TOKEN\";\n    readonly MISSING_REFRESH_TOKEN: \"MISSING_REFRESH_TOKEN\";\n    readonly USER_IS_NOT_EXIST: \"USER_IS_NOT_EXIST\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "AuthDomainErrorCodes",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@khni/auth-errors!AuthDomainErrorCodesType:type",
+          "docComment": "/**\n * Combined Authentication Domain Error Codes Type\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type AuthDomainErrorCodesType = "
+            },
+            {
+              "kind": "Content",
+              "text": "(typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthDomainErrorCodes",
+              "canonicalReference": "@khni/auth-errors!AuthDomainErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": ")[keyof typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthDomainErrorCodes",
+              "canonicalReference": "@khni/auth-errors!AuthDomainErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "releaseTag": "Public",
+          "name": "AuthDomainErrorCodesType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!authDomainErrorMapping:var",
+          "docComment": "/**\n * Authentication Domain Error Mapping\n *\n * @remarks\n *\n * Maps domain error codes to appropriate HTTP status codes and user-friendly messages. These errors are expected and represent normal business logic failures.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "authDomainErrorMapping: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly AUTH_USED_EMAIL: {\n        readonly statusCode: 409;\n        readonly responseMessage: \"Email already registered\";\n    };\n    readonly AUTH_USED_IDENTIFIER: {\n        readonly statusCode: 409;\n        readonly responseMessage: \"Identifier already registered\";\n    };\n    readonly AUTH_UNVERIFIED_EMAIL: {\n        readonly statusCode: 403;\n        readonly responseMessage: \"Email verification required\";\n    };\n    readonly INCORRECT_CREDENTIALS: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Invalid credentials\";\n    };\n    readonly USER_NOT_LOCAL: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"External authentication required\";\n    };\n    readonly REFRESH_TOKEN_INVALID: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Refresh token is invalid or expired. Please log in again.\";\n    };\n    readonly MISSING_OR_MALFORMED_AUTHORIZATION_HEADER: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Access is denied.\";\n    };\n    readonly INVALID_ACCESS_TOKEN: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The provided access token is invalid or has expired. Please log in again.\";\n    };\n    readonly EXPIRED_ACCESS_TOKEN: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The provided access token is expired. Please log in again.\";\n    };\n    readonly MISSING_ACCESS_TOKEN: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Access token is missing. Please provide a valid access token.\";\n    };\n    readonly MISSING_REFRESH_TOKEN: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"You are already Logged out\";\n    };\n    readonly USER_IS_NOT_EXIST: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"Email is not Exist in the Database\";\n    };\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "authDomainErrorMapping",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!AuthError:class",
+          "docComment": "/**\n * Base Authentication Error Class\n *\n * @remarks\n *\n * Extends the framework's CustomError class to provide typed authentication errors. This serves as the foundation for all authentication-related errors in the system.\n *\n * @example\n * ```typescript\n * throw new AuthError({\n *   code: 'INCORRECT_CREDENTIALS',\n *   name: 'AuthError',\n *   logLevel: 'warn',\n *   message: 'Invalid email or password'\n * });\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class AuthError extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "CustomError",
+              "canonicalReference": "@khni/error-handler!CustomError:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthErrorCodesType",
+              "canonicalReference": "@khni/auth-errors!AuthErrorCodesType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/AuthError.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "AuthError",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@khni/auth-errors!AuthError:constructor(1)",
+              "docComment": "/**\n * Creates a new AuthError instance\n *\n * @param error - Error configuration object\n *\n * @param  - error.code - The specific authentication error code\n *\n * @param  - error.name - The name of the error class\n *\n * @param  - error.logLevel - Log level for error reporting ('warn' for domain errors, 'error' for unexpected)\n *\n * @param  - error.message - Human readable error message\n *\n * @param  - error.cause - Original error that caused this one (for unexpected errors)\n *\n * @param  - error.meta - Additional metadata for debugging\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(error: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CustomErrorConstructor",
+                  "canonicalReference": "@khni/error-handler!CustomErrorConstructor:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!AuthErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "> & {\n        name: string;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "error",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!AuthErrorCodes:var",
+          "docComment": "/**\n * Complete Authentication Error Codes (Domain + Unexpected)\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "AuthErrorCodes: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly FINDING_USER_FAILED: \"FINDING_USER_FAILED\";\n    readonly AUTH_USER_CREATION_FAILED: \"AUTH_USER_CREATION_FAILED\";\n    readonly ISSUE_TOKEN_FAILED: \"ISSUE_TOKEN_FAILED\";\n    readonly PASSWORD_RESET_FAILED: \"PASSWORD_RESET_FAILED\";\n    readonly REFRESHTOKEN_REVOKE_FAILED: \"REFRESHTOKEN_REVOKE_FAILED\";\n    readonly REFRESHTOKEN_CREATE_FAILED: \"REFRESHTOKEN_CREATE_FAILED\";\n    readonly REFRESHTOKEN_VERIFY_FAILED: \"REFRESHTOKEN_VERIFY_FAILED\";\n    readonly LOGIN_FAILED: \"LOGIN_FAILED\";\n    readonly AUTH_USED_EMAIL: \"AUTH_USED_EMAIL\";\n    readonly AUTH_USED_IDENTIFIER: \"AUTH_USED_IDENTIFIER\";\n    readonly AUTH_UNVERIFIED_EMAIL: \"AUTH_UNVERIFIED_EMAIL\";\n    readonly INCORRECT_CREDENTIALS: \"INCORRECT_CREDENTIALS\";\n    readonly USER_NOT_LOCAL: \"USER_NOT_LOCAL\";\n    readonly REFRESH_TOKEN_INVALID: \"REFRESH_TOKEN_INVALID\";\n    readonly MISSING_OR_MALFORMED_AUTHORIZATION_HEADER: \"MISSING_OR_MALFORMED_AUTHORIZATION_HEADER\";\n    readonly INVALID_ACCESS_TOKEN: \"INVALID_ACCESS_TOKEN\";\n    readonly EXPIRED_ACCESS_TOKEN: \"EXPIRED_ACCESS_TOKEN\";\n    readonly MISSING_ACCESS_TOKEN: \"MISSING_ACCESS_TOKEN\";\n    readonly MISSING_REFRESH_TOKEN: \"MISSING_REFRESH_TOKEN\";\n    readonly USER_IS_NOT_EXIST: \"USER_IS_NOT_EXIST\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "AuthErrorCodes",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@khni/auth-errors!AuthErrorCodesType:type",
+          "docComment": "/**\n * Combined Authentication Error Codes Type\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type AuthErrorCodesType = "
+            },
+            {
+              "kind": "Content",
+              "text": "(typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthErrorCodes",
+              "canonicalReference": "@khni/auth-errors!AuthErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": ")[keyof typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthErrorCodes",
+              "canonicalReference": "@khni/auth-errors!AuthErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "releaseTag": "Public",
+          "name": "AuthErrorCodesType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!authErrorMapping:var",
+          "docComment": "/**\n * Complete Authentication Error Mapping\n *\n * @remarks\n *\n * Combined mapping for all authentication errors (domain + unexpected)\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "authErrorMapping: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly AUTH_USER_CREATION_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Account creation failed\";\n    };\n    readonly ISSUE_TOKEN_FAILED: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"Unexpected error while issuing tokens.\";\n    };\n    readonly PASSWORD_RESET_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Password Reset Failed\";\n    };\n    readonly REFRESHTOKEN_REVOKE_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Failed to Logout\";\n    };\n    readonly REFRESHTOKEN_CREATE_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Failed to create refresh token\";\n    };\n    readonly REFRESHTOKEN_VERIFY_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Failed to verify refresh token\";\n    };\n    readonly LOGIN_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while login\";\n    };\n    readonly FINDING_USER_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while finding the user\";\n    };\n    readonly AUTH_USED_EMAIL: {\n        readonly statusCode: 409;\n        readonly responseMessage: \"Email already registered\";\n    };\n    readonly AUTH_USED_IDENTIFIER: {\n        readonly statusCode: 409;\n        readonly responseMessage: \"Identifier already registered\";\n    };\n    readonly AUTH_UNVERIFIED_EMAIL: {\n        readonly statusCode: 403;\n        readonly responseMessage: \"Email verification required\";\n    };\n    readonly INCORRECT_CREDENTIALS: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Invalid credentials\";\n    };\n    readonly USER_NOT_LOCAL: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"External authentication required\";\n    };\n    readonly REFRESH_TOKEN_INVALID: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Refresh token is invalid or expired. Please log in again.\";\n    };\n    readonly MISSING_OR_MALFORMED_AUTHORIZATION_HEADER: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Access is denied.\";\n    };\n    readonly INVALID_ACCESS_TOKEN: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The provided access token is invalid or has expired. Please log in again.\";\n    };\n    readonly EXPIRED_ACCESS_TOKEN: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The provided access token is expired. Please log in again.\";\n    };\n    readonly MISSING_ACCESS_TOKEN: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Access token is missing. Please provide a valid access token.\";\n    };\n    readonly MISSING_REFRESH_TOKEN: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"You are already Logged out\";\n    };\n    readonly USER_IS_NOT_EXIST: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"Email is not Exist in the Database\";\n    };\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "authErrorMapping",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!AuthUnexpectedError:class",
+          "docComment": "/**\n * Authentication Unexpected Error Class\n *\n * @remarks\n *\n * Represents unexpected system-level failures that occur during authentication operations. These errors indicate problems with infrastructure, database connections, or external services.\n *\n * Unexpected errors use 'error' log level as they require investigation and monitoring.\n *\n * @example\n * ```typescript\n * try {\n *   await createUser(userData);\n * } catch (error) {\n *   throw new AuthUnexpectedError(\n *     AuthUnexpectedErrorCodes.AUTH_USER_CREATION_FAILED,\n *     error,\n *     'Failed to create user in database'\n *   );\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class AuthUnexpectedError extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthError",
+              "canonicalReference": "@khni/auth-errors!AuthError:class"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/AuthUnexpectedError.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "AuthUnexpectedError",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@khni/auth-errors!AuthUnexpectedError:constructor(1)",
+              "docComment": "/**\n * Creates a new AuthUnexpectedError instance\n *\n * @param code - The unexpected error code from AuthUnexpectedErrorCodes\n *\n * @param cause - The original error that caused this failure\n *\n * @param msg - Optional custom error message (uses default message if not provided)\n *\n * @param meta - Additional metadata for debugging and monitoring\n *\n * @example\n * ```typescript\n * // With original error and metadata\n * throw new AuthUnexpectedError(\n *   AuthUnexpectedErrorCodes.FINDING_USER_FAILED,\n *   databaseError,\n *   'Database connection failed while finding user',\n *   { query: userQuery, duration: 5000 }\n * );\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthUnexpectedErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!AuthUnexpectedErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", cause: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", msg?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "cause",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "msg",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 8
+                  },
+                  "isOptional": true
+                }
+              ]
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!AuthUnexpectedErrorCodes:var",
+          "docComment": "/**\n * Authentication Unexpected/Internal Error Codes\n *\n * @remarks\n *\n * These represent system-level failures that should not normally occur during business operations. They indicate problems with infrastructure, database connections, or other internal services.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "AuthUnexpectedErrorCodes: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly FINDING_USER_FAILED: \"FINDING_USER_FAILED\";\n    readonly AUTH_USER_CREATION_FAILED: \"AUTH_USER_CREATION_FAILED\";\n    readonly ISSUE_TOKEN_FAILED: \"ISSUE_TOKEN_FAILED\";\n    readonly PASSWORD_RESET_FAILED: \"PASSWORD_RESET_FAILED\";\n    readonly REFRESHTOKEN_REVOKE_FAILED: \"REFRESHTOKEN_REVOKE_FAILED\";\n    readonly REFRESHTOKEN_CREATE_FAILED: \"REFRESHTOKEN_CREATE_FAILED\";\n    readonly REFRESHTOKEN_VERIFY_FAILED: \"REFRESHTOKEN_VERIFY_FAILED\";\n    readonly LOGIN_FAILED: \"LOGIN_FAILED\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "AuthUnexpectedErrorCodes",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@khni/auth-errors!AuthUnexpectedErrorCodesType:type",
+          "docComment": "/**\n * Combined Authentication Unexpected Error Codes Type\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type AuthUnexpectedErrorCodesType = "
+            },
+            {
+              "kind": "Content",
+              "text": "(typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthUnexpectedErrorCodes",
+              "canonicalReference": "@khni/auth-errors!AuthUnexpectedErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": ")[keyof typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthUnexpectedErrorCodes",
+              "canonicalReference": "@khni/auth-errors!AuthUnexpectedErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "releaseTag": "Public",
+          "name": "AuthUnexpectedErrorCodesType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!authUnexpectedErrorMapping:var",
+          "docComment": "/**\n * Authentication Unexpected Error Mapping\n *\n * @remarks\n *\n * Maps unexpected/internal error codes to HTTP 500 status with generic messages to avoid exposing internal implementation details.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "authUnexpectedErrorMapping: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly AUTH_USER_CREATION_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Account creation failed\";\n    };\n    readonly ISSUE_TOKEN_FAILED: {\n        readonly statusCode: 400;\n        readonly responseMessage: \"Unexpected error while issuing tokens.\";\n    };\n    readonly PASSWORD_RESET_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Password Reset Failed\";\n    };\n    readonly REFRESHTOKEN_REVOKE_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Failed to Logout\";\n    };\n    readonly REFRESHTOKEN_CREATE_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Failed to create refresh token\";\n    };\n    readonly REFRESHTOKEN_VERIFY_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Failed to verify refresh token\";\n    };\n    readonly LOGIN_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while login\";\n    };\n    readonly FINDING_USER_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while finding the user\";\n    };\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/auth/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "authUnexpectedErrorMapping",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!ErrorFactories:class",
+          "docComment": "/**\n * Error Factory Utilities\n *\n * @remarks\n *\n * Helper functions to create common error instances with consistent patterns.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class ErrorFactories "
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "ErrorFactories",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@khni/auth-errors!ErrorFactories.authDomain:member(1)",
+              "docComment": "/**\n * Creates an authentication domain error with default message\n *\n * @param code - Domain error code\n *\n * @param meta - Optional metadata\n *\n * @returns Configured AuthDomainError instance\n *\n * @example\n * ```typescript\n * throw ErrorFactories.authDomain('AUTH_USED_EMAIL', { email: 'user@example.com' });\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static authDomain(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthDomainErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!AuthDomainErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthDomainError",
+                  "canonicalReference": "@khni/auth-errors!AuthDomainError:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "authDomain"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@khni/auth-errors!ErrorFactories.authUnexpected:member(1)",
+              "docComment": "/**\n * Creates an authentication unexpected error with cause\n *\n * @param code - Unexpected error code\n *\n * @param cause - Original error\n *\n * @param meta - Optional metadata\n *\n * @returns Configured AuthUnexpectedError instance\n *\n * @example\n * ```typescript\n * throw ErrorFactories.authUnexpected(\n *   'AUTH_USER_CREATION_FAILED',\n *   dbError,\n *   { table: 'users' }\n * );\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static authUnexpected(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthUnexpectedErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!AuthUnexpectedErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", cause: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthUnexpectedError",
+                  "canonicalReference": "@khni/auth-errors!AuthUnexpectedError:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "cause",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "authUnexpected"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@khni/auth-errors!ErrorFactories.otpDomain:member(1)",
+              "docComment": "/**\n * Creates an OTP domain error with default message\n *\n * @param code - Domain error code\n *\n * @param meta - Optional metadata\n *\n * @returns Configured OtpDomainError instance\n *\n * @example\n * ```typescript\n * throw ErrorFactories.otpDomain('OTP_INVALID', { attempts: 3 });\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static otpDomain(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpDomainErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!OtpDomainErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpDomainError",
+                  "canonicalReference": "@khni/auth-errors!OtpDomainError:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "otpDomain"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@khni/auth-errors!ErrorFactories.otpUnexpected:member(1)",
+              "docComment": "/**\n * Creates an OTP unexpected error with cause\n *\n * @param code - Unexpected error code\n *\n * @param cause - Original error\n *\n * @param meta - Optional metadata\n *\n * @returns Configured OtpUnexpectedError instance\n *\n * @example\n * ```typescript\n * throw ErrorFactories.otpUnexpected(\n *   'OTP_CREATION_FAILED',\n *   smsError,\n *   { provider: 'twilio' }\n * );\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static otpUnexpected(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpUnexpectedErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!OtpUnexpectedErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", cause: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpUnexpectedError",
+                  "canonicalReference": "@khni/auth-errors!OtpUnexpectedError:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "cause",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "otpUnexpected"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@khni/auth-errors!ErrorResponseConfig:interface",
+          "docComment": "/**\n * Error response configuration interface\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ErrorResponseConfig "
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "releaseTag": "Public",
+          "name": "ErrorResponseConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@khni/auth-errors!ErrorResponseConfig#responseMessage:member",
+              "docComment": "/**\n * User-friendly error message\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "responseMessage: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "responseMessage",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@khni/auth-errors!ErrorResponseConfig#statusCode:member",
+              "docComment": "/**\n * HTTP status code\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "statusCode: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "statusCode",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@khni/auth-errors!getAuthErrorResponse:function(1)",
+          "docComment": "/**\n * Utility function to get authentication error response configuration\n *\n * @param code - The authentication error code\n *\n * @returns Error response configuration with status code and message\n *\n * @example\n * ```typescript\n * const config = getAuthErrorResponse('AUTH_USED_EMAIL');\n * // returns { statusCode: 409, responseMessage: \"Email already registered\" }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getAuthErrorResponse(code: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthErrorCodesType",
+              "canonicalReference": "@khni/auth-errors!AuthErrorCodesType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "ErrorResponseConfig",
+              "canonicalReference": "@khni/auth-errors!ErrorResponseConfig:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "code",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getAuthErrorResponse"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@khni/auth-errors!getOtpErrorResponse:function(1)",
+          "docComment": "/**\n * Utility function to get OTP error response configuration\n *\n * @param code - The OTP error code\n *\n * @returns Error response configuration with status code and message\n *\n * @example\n * ```typescript\n * const config = getOtpErrorResponse('OTP_INVALID');\n * // returns { statusCode: 401, responseMessage: \"The OTP you entered is incorrect...\" }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getOtpErrorResponse(code: "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpErrorCodesType",
+              "canonicalReference": "@khni/auth-errors!OtpErrorCodesType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "ErrorResponseConfig",
+              "canonicalReference": "@khni/auth-errors!ErrorResponseConfig:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "code",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getOtpErrorResponse"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@khni/auth-errors!isAuthDomainError:function(1)",
+          "docComment": "/**\n * Type guard to check if an error is an AuthDomainError\n *\n * @param error - The error to check\n *\n * @returns True if the error is an AuthDomainError\n *\n * @example\n * ```typescript\n * if (isAuthDomainError(error)) {\n *   // Handle domain error specifically\n *   logger.warn(error.message);\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isAuthDomainError(error: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "error",
+              "canonicalReference": "@khni/auth-errors!~error"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthDomainError",
+              "canonicalReference": "@khni/auth-errors!AuthDomainError:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "error",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isAuthDomainError"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@khni/auth-errors!isAuthUnexpectedError:function(1)",
+          "docComment": "/**\n * Type guard to check if an error is an AuthUnexpectedError\n *\n * @param error - The error to check\n *\n * @returns True if the error is an AuthUnexpectedError\n *\n * @example\n * ```typescript\n * if (isAuthUnexpectedError(error)) {\n *   // Handle unexpected error specifically\n *   logger.error(error.message, error.cause);\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isAuthUnexpectedError(error: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "error",
+              "canonicalReference": "@khni/auth-errors!~error"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthUnexpectedError",
+              "canonicalReference": "@khni/auth-errors!AuthUnexpectedError:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "error",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isAuthUnexpectedError"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@khni/auth-errors!isOtpDomainError:function(1)",
+          "docComment": "/**\n * Type guard to check if an error is an OtpDomainError\n *\n * @param error - The error to check\n *\n * @returns True if the error is an OtpDomainError\n *\n * @example\n * ```typescript\n * if (isOtpDomainError(error)) {\n *   // Handle OTP domain error specifically\n *   return response.status(401).json({ error: error.message });\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isOtpDomainError(error: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "error",
+              "canonicalReference": "@khni/auth-errors!~error"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpDomainError",
+              "canonicalReference": "@khni/auth-errors!OtpDomainError:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "error",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isOtpDomainError"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@khni/auth-errors!isOtpUnexpectedError:function(1)",
+          "docComment": "/**\n * Type guard to check if an error is an OtpUnexpectedError\n *\n * @param error - The error to check\n *\n * @returns True if the error is an OtpUnexpectedError\n *\n * @example\n * ```typescript\n * if (isOtpUnexpectedError(error)) {\n *   // Handle OTP unexpected error specifically\n *   sentry.captureException(error);\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isOtpUnexpectedError(error: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "error",
+              "canonicalReference": "@khni/auth-errors!~error"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpUnexpectedError",
+              "canonicalReference": "@khni/auth-errors!OtpUnexpectedError:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/utils.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "error",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isOtpUnexpectedError"
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!OtpDomainError:class",
+          "docComment": "/**\n * OTP Domain Error Class\n *\n * @remarks\n *\n * Represents expected business logic errors that occur during normal OTP operations. These errors are user-facing and typically result from invalid OTP codes, expired tokens, or other user-related issues.\n *\n * Domain errors use 'warn' log level as they are expected and don't indicate system problems.\n *\n * @example\n * ```typescript\n * // User enters wrong OTP code\n * throw new OtpDomainError(OtpDomainErrorCodes.OTP_INVALID);\n *\n * // OTP code has expired\n * throw new OtpDomainError(OtpDomainErrorCodes.OTP_EXPIRED);\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class OtpDomainError extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpError",
+              "canonicalReference": "@khni/auth-errors!OtpError:class"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/OtpDomainError.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "OtpDomainError",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@khni/auth-errors!OtpDomainError:constructor(1)",
+              "docComment": "/**\n * Creates a new OtpDomainError instance\n *\n * @param code - The domain error code from OtpDomainErrorCodes\n *\n * @param msg - Optional custom error message (uses default message if not provided)\n *\n * @param meta - Additional metadata for context and debugging\n *\n * @example\n * ```typescript\n * // Basic usage with default message\n * throw new OtpDomainError(OtpDomainErrorCodes.OTP_INVALID);\n *\n * // With custom message and metadata\n * throw new OtpDomainError(\n *   OtpDomainErrorCodes.OTP_EXPIRED,\n *   'OTP expired after 5 minutes',\n *   { userId: '123', generatedAt: '2023-01-01T00:00:00Z' }\n * );\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpDomainErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!OtpDomainErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", msg?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "msg",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                }
+              ]
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!OtpDomainErrorCodes:var",
+          "docComment": "/**\n * OTP Domain Error Codes\n *\n * @remarks\n *\n * Expected errors related to One-Time Password operations that occur during normal business logic and should be returned to the client.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "OtpDomainErrorCodes: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly OTP_INVALID: \"OTP_INVALID\";\n    readonly OTP_EXPIRED: \"OTP_EXPIRED\";\n    readonly TOKEN_EXPIRED: \"TOKEN_EXPIRED\";\n    readonly OTP_TOKEN_INVALID: \"OTP_TOKEN_INVALID\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "OtpDomainErrorCodes",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@khni/auth-errors!OtpDomainErrorCodesType:type",
+          "docComment": "/**\n * Combined OTP Domain Error Codes Type\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type OtpDomainErrorCodesType = "
+            },
+            {
+              "kind": "Content",
+              "text": "(typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpDomainErrorCodes",
+              "canonicalReference": "@khni/auth-errors!OtpDomainErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": ")[keyof typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpDomainErrorCodes",
+              "canonicalReference": "@khni/auth-errors!OtpDomainErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "releaseTag": "Public",
+          "name": "OtpDomainErrorCodesType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!otpDomainErrorMapping:var",
+          "docComment": "/**\n * OTP Domain Error Mapping\n *\n * @remarks\n *\n * Maps OTP domain error codes to appropriate HTTP status codes and user-friendly messages. These errors help users understand what went wrong with their OTP operation.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "otpDomainErrorMapping: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly OTP_INVALID: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The OTP you entered is incorrect. Please try again.\";\n    };\n    readonly OTP_EXPIRED: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The OTP is expired. Please request a new one.\";\n    };\n    readonly TOKEN_EXPIRED: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Token is expired.\";\n    };\n    readonly OTP_TOKEN_INVALID: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Please request new OTP\";\n    };\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "otpDomainErrorMapping",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!OtpError:class",
+          "docComment": "/**\n * Base OTP Error Class\n *\n * @remarks\n *\n * Extends the framework's CustomError class to provide typed OTP errors. This serves as the foundation for all OTP-related errors in the system.\n *\n * @example\n * ```typescript\n * throw new OtpError({\n *   code: 'OTP_INVALID',\n *   name: 'OtpError',\n *   logLevel: 'warn',\n *   message: 'The provided OTP code is invalid'\n * });\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class OtpError extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "CustomError",
+              "canonicalReference": "@khni/error-handler!CustomError:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpErrorCodesType",
+              "canonicalReference": "@khni/auth-errors!OtpErrorCodesType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/OtpError.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "OtpError",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@khni/auth-errors!OtpError:constructor(1)",
+              "docComment": "/**\n * Creates a new OtpError instance\n *\n * @param error - Error configuration object\n *\n * @param  - error.code - The specific OTP error code\n *\n * @param  - error.name - The name of the error class\n *\n * @param  - error.logLevel - Log level for error reporting ('warn' for domain errors, 'error' for unexpected)\n *\n * @param  - error.message - Human readable error message\n *\n * @param  - error.cause - Original error that caused this one (for unexpected errors)\n *\n * @param  - error.meta - Additional metadata for debugging\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(error: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CustomErrorConstructor",
+                  "canonicalReference": "@khni/error-handler!CustomErrorConstructor:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!OtpErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "> & {\n        name: string;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "error",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!OtpErrorCodes:var",
+          "docComment": "/**\n * Complete OTP Error Codes (Domain + Unexpected)\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "OtpErrorCodes: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly OTP_CREATION_FAILED: \"OTP_CREATION_FAILED\";\n    readonly OTP_VERIFICATION_FAILED: \"OTP_VERIFICATION_FAILED\";\n    readonly OTP_INVALID: \"OTP_INVALID\";\n    readonly OTP_EXPIRED: \"OTP_EXPIRED\";\n    readonly TOKEN_EXPIRED: \"TOKEN_EXPIRED\";\n    readonly OTP_TOKEN_INVALID: \"OTP_TOKEN_INVALID\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "OtpErrorCodes",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@khni/auth-errors!OtpErrorCodesType:type",
+          "docComment": "/**\n * Combined OTP Error Codes Type\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type OtpErrorCodesType = "
+            },
+            {
+              "kind": "Content",
+              "text": "(typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpErrorCodes",
+              "canonicalReference": "@khni/auth-errors!OtpErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": ")[keyof typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpErrorCodes",
+              "canonicalReference": "@khni/auth-errors!OtpErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "releaseTag": "Public",
+          "name": "OtpErrorCodesType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!otpErrorMapping:var",
+          "docComment": "/**\n * Complete OTP Error Mapping\n *\n * @remarks\n *\n * Combined mapping for all OTP errors (domain + unexpected)\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "otpErrorMapping: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly OTP_CREATION_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while creating OTP\";\n    };\n    readonly OTP_VERIFICATION_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while verifying OTP\";\n    };\n    readonly OTP_INVALID: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The OTP you entered is incorrect. Please try again.\";\n    };\n    readonly OTP_EXPIRED: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"The OTP is expired. Please request a new one.\";\n    };\n    readonly TOKEN_EXPIRED: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Token is expired.\";\n    };\n    readonly OTP_TOKEN_INVALID: {\n        readonly statusCode: 401;\n        readonly responseMessage: \"Please request new OTP\";\n    };\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "otpErrorMapping",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@khni/auth-errors!OtpUnexpectedError:class",
+          "docComment": "/**\n * OTP Unexpected Error Class\n *\n * @remarks\n *\n * Represents unexpected system-level failures that occur during OTP operations. These errors indicate problems with OTP generation services, storage, or verification systems.\n *\n * Unexpected errors use 'error' log level as they require investigation and monitoring.\n *\n * @example\n * ```typescript\n * try {\n *   await generateOtp(userId);\n * } catch (error) {\n *   throw new OtpUnexpectedError(\n *     OtpUnexpectedErrorCodes.OTP_CREATION_FAILED,\n *     error,\n *     'Failed to generate OTP code'\n *   );\n * }\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class OtpUnexpectedError extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpError",
+              "canonicalReference": "@khni/auth-errors!OtpError:class"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/OtpUnexpectedError.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "OtpUnexpectedError",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@khni/auth-errors!OtpUnexpectedError:constructor(1)",
+              "docComment": "/**\n * Creates a new OtpUnexpectedError instance\n *\n * @param code - The unexpected error code from OtpUnexpectedErrorCodes\n *\n * @param cause - The original error that caused this failure\n *\n * @param msg - Optional custom error message (uses default message if not provided)\n *\n * @param meta - Additional metadata for debugging and monitoring\n *\n * @example\n * ```typescript\n * // With original error and metadata\n * throw new OtpUnexpectedError(\n *   OtpUnexpectedErrorCodes.OTP_VERIFICATION_FAILED,\n *   serviceError,\n *   'OTP verification service unavailable',\n *   { userId: '123', service: 'sms-gateway' }\n * );\n * ```\n *\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(code: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OtpUnexpectedErrorCodesType",
+                  "canonicalReference": "@khni/auth-errors!OtpUnexpectedErrorCodesType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", cause: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", msg?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", meta?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "code",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "cause",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "msg",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "meta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 8
+                  },
+                  "isOptional": true
+                }
+              ]
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!OtpUnexpectedErrorCodes:var",
+          "docComment": "/**\n * OTP Unexpected/Internal Error Codes\n *\n * @remarks\n *\n * System-level failures in OTP generation or verification services that indicate infrastructure problems.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "OtpUnexpectedErrorCodes: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly OTP_CREATION_FAILED: \"OTP_CREATION_FAILED\";\n    readonly OTP_VERIFICATION_FAILED: \"OTP_VERIFICATION_FAILED\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "OtpUnexpectedErrorCodes",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@khni/auth-errors!OtpUnexpectedErrorCodesType:type",
+          "docComment": "/**\n * Combined OTP Unexpected Error Codes Type\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type OtpUnexpectedErrorCodesType = "
+            },
+            {
+              "kind": "Content",
+              "text": "(typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpUnexpectedErrorCodes",
+              "canonicalReference": "@khni/auth-errors!OtpUnexpectedErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": ")[keyof typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "OtpUnexpectedErrorCodes",
+              "canonicalReference": "@khni/auth-errors!OtpUnexpectedErrorCodes:var"
+            },
+            {
+              "kind": "Content",
+              "text": "]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "releaseTag": "Public",
+          "name": "OtpUnexpectedErrorCodesType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@khni/auth-errors!otpUnexpectedErrorMapping:var",
+          "docComment": "/**\n * OTP Unexpected Error Mapping\n *\n * @remarks\n *\n * Maps OTP internal error codes to HTTP 500 status with generic messages to avoid exposing OTP service implementation details.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "otpUnexpectedErrorMapping: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly OTP_CREATION_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while creating OTP\";\n    };\n    readonly OTP_VERIFICATION_FAILED: {\n        readonly statusCode: 500;\n        readonly responseMessage: \"Something went wrong while verifying OTP\";\n    };\n}"
+            }
+          ],
+          "fileUrlPath": "src/errors/otp/errors.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "otpUnexpectedErrorMapping",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}
